@@ -1,0 +1,18 @@
+spring:
+  data:
+    mongodb:
+      uri: 'mongodb+srv://gajendrapatidar9109: 9109866407 @journaldb.r80fl.mongodb.net/?retryWrites=true&w=majority&appName=JournalDB'
+      database: journaldb
+      auto-index-creation: true
+
+server:
+  port: 8081
+  servlet:
+    context-path: /journal
+
+
+logging:
+   level:
+     net:
+       newlearning:
+         journalApp : DEBUG
