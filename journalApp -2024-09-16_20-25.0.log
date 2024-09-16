@@ -1,5 +1,5 @@
-2024-09-16 19:42:16 [cluster-ClusterId{value='66e83c41504c9b2a4ebb7c02', description='null'}-journaldb-shard-00-02.r80fl.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server journaldb-shard-00-02.r80fl.mongodb.net:27017
-com.mongodb.MongoSocketException: journaldb-shard-00-02.r80fl.mongodb.net
+2024-09-16 20:25:27 [cluster-ClusterId{value='66e83d82aaa11f6397a85f8d', description='null'}-journaldb-shard-00-01.r80fl.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server journaldb-shard-00-01.r80fl.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (journaldb-shard-00-01.r80fl.mongodb.net)
 	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:217)
 	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:75)
 	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
@@ -7,14 +7,17 @@ com.mongodb.MongoSocketException: journaldb-shard-00-02.r80fl.mongodb.net
 	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
 	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.net.UnknownHostException: journaldb-shard-00-02.r80fl.mongodb.net
-	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
-	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1191)
+Caused by: java.net.UnknownHostException: No such host is known (journaldb-shard-00-01.r80fl.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)
 	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
 	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
 	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:209)
 	... 6 common frames omitted
-2024-09-16 19:42:27 [cluster-ClusterId{value='66e83c41504c9b2a4ebb7c02', description='null'}-journaldb-shard-00-02.r80fl.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server journaldb-shard-00-02.r80fl.mongodb.net:27017
+2024-09-16 20:25:38 [cluster-ClusterId{value='66e83d82aaa11f6397a85f8d', description='null'}-journaldb-shard-00-01.r80fl.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server journaldb-shard-00-01.r80fl.mongodb.net:27017
 com.mongodb.MongoSocketWriteException: Exception sending message
 	at com.mongodb.internal.connection.InternalStreamConnection.translateWriteException(InternalStreamConnection.java:684)
 	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:555)
